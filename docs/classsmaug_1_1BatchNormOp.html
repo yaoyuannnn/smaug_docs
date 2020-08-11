@@ -90,7 +90,7 @@ Inheritance diagram for smaug::BatchNormOp&lt; Backend &gt;:</div>
 class smaug::BatchNormOp&lt; Backend &gt;</h3>
 
 <p>Implements the batch normalization layer.</p>
-<p>The four different parameter types to BN layers (mean, v ariance, gamma, and beta) are to be provided as separate Tensors. </p>
+<p>The four different parameter types to BN layers (mean, v ariance, gamma, and beta) are to be provided as separate Tensors. For performance reasons, the variance parameter is often precomputed as 1/sqrt(variance + eps), so hardware does not need to do a square root/division operation. </p>
 
 <p class="definition">Definition at line <a class="el" href="backend_8h_source.html#l00045">45</a> of file <a class="el" href="backend_8h_source.html">backend.h</a>.</p>
 </div><table class="memberdecls">
@@ -325,7 +325,7 @@ template&lt;typename Backend&gt; </div>
 
 <p>Implements <a class="el" href="classsmaug_1_1Operator.html#af6fcdf37b85278b15ac06d64f5d0f77f">smaug::Operator</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="batch__norm__op_8h_source.html#l00090">90</a> of file <a class="el" href="batch__norm__op_8h_source.html">batch_norm_op.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="batch__norm__op_8h_source.html#l00092">92</a> of file <a class="el" href="batch__norm__op_8h_source.html">batch_norm_op.h</a>.</p>
 
 </div>
 </div>
@@ -357,7 +357,7 @@ template&lt;typename Backend&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classsmaug_1_1Operator.html#a59f4ac87095bbfe3edc79fa75cdcca10">smaug::Operator</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="batch__norm__op_8h_source.html#l00095">95</a> of file <a class="el" href="batch__norm__op_8h_source.html">batch_norm_op.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="batch__norm__op_8h_source.html#l00097">97</a> of file <a class="el" href="batch__norm__op_8h_source.html">batch_norm_op.h</a>.</p>
 
 </div>
 </div>
@@ -389,7 +389,7 @@ template&lt;typename Backend&gt; </div>
 
 <p>Reimplemented from <a class="el" href="classsmaug_1_1Operator.html#af7f60d2188f71e0a3023e44063cd3862">smaug::Operator</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="batch__norm__op_8h_source.html#l00099">99</a> of file <a class="el" href="batch__norm__op_8h_source.html">batch_norm_op.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="batch__norm__op_8h_source.html#l00101">101</a> of file <a class="el" href="batch__norm__op_8h_source.html">batch_norm_op.h</a>.</p>
 
 </div>
 </div>
@@ -422,7 +422,7 @@ template&lt;typename Backend&gt; </div>
 
 <p>Implements <a class="el" href="classsmaug_1_1Operator.html#a53f1eac5c1a0328f68f6e51eb6709a71">smaug::Operator</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="batch__norm__op_8h_source.html#l00043">43</a> of file <a class="el" href="batch__norm__op_8h_source.html">batch_norm_op.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="batch__norm__op_8h_source.html#l00045">45</a> of file <a class="el" href="batch__norm__op_8h_source.html">batch_norm_op.h</a>.</p>
 
 </div>
 </div>
@@ -455,7 +455,7 @@ template&lt;&gt; </div>
 
 <p>Implements <a class="el" href="classsmaug_1_1Operator.html#a53f1eac5c1a0328f68f6e51eb6709a71">smaug::Operator</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ref__batch__norm__op_8cpp_source.html#l00206">206</a> of file <a class="el" href="ref__batch__norm__op_8cpp_source.html">ref_batch_norm_op.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ref__batch__norm__op_8cpp_source.html#l00207">207</a> of file <a class="el" href="ref__batch__norm__op_8cpp_source.html">ref_batch_norm_op.cpp</a>.</p>
 
 </div>
 </div>
