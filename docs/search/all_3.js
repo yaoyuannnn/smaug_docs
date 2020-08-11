@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['calc_5fpadding',['calc_padding',['../namespacesmaug.html#aaaf353c0b5f5d65cc37824dd7f43ac48',1,'smaug']]],
   ['concatop',['ConcatOp',['../classsmaug_1_1ConcatOp.html',1,'smaug::ConcatOp&lt; Backend &gt;'],['../classsmaug_1_1ConcatOp.html#a6ab48a67074ec8f8124c39297a772c5f',1,'smaug::ConcatOp::ConcatOp()']]],
   ['concattensors',['concatTensors',['../namespacesmaug.html#a2f49dfb9f461b76b26c0df68a50d267a',1,'smaug']]],
   ['convertfp16tofp32tensor',['convertFp16ToFp32Tensor',['../namespacesmaug.html#adc56c8bd6b2d63a86b80914442a8aee0',1,'smaug']]],
