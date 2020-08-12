@@ -162,6 +162,246 @@
             
   <div class="section" id="smaug">
 <h1>smaug<a class="headerlink" href="#smaug" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="smaug.Graph">
+<em class="property">class </em><code class="sig-prename descclassname">smaug.</code><code class="sig-name descname">Graph</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'DefaultGraph'</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">'Reference'</span></em>, <em class="sig-param"><span class="n">mem_policy</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/graph.html#Graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.Graph" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="smaug.Graph.add_node">
+<code class="sig-name descname">add_node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">op</span></em>, <em class="sig-param"><span class="n">input_tensors</span></em>, <em class="sig-param"><span class="n">output_tensors_dims</span></em>, <em class="sig-param"><span class="n">output_tensor_layout</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">output_tensor_dtype</span><span class="o">=</span><span class="default_value">4</span></em>, <em class="sig-param"><span class="n">output_tensor_dformat</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">params</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/graph.html#Graph.add_node"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.Graph.add_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a node and add it to graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of the node. If the name is already used by another node, a
+“_N” suffix will be added.</p></li>
+<li><p><strong>op</strong> – Operator type.</p></li>
+<li><p><strong>input_tensors</strong> – A list of input tensors of the node.</p></li>
+<li><p><strong>output_tensors_dims</strong> – A list of dims of the output tensors.</p></li>
+<li><p><strong>output_tensor_layout</strong> – Layout of the output tensor.</p></li>
+<li><p><strong>output_tensor_dtype</strong> – Data type of the output tensor.</p></li>
+<li><p><strong>output_tensor_dformat</strong> – Storage format of the output tensor.</p></li>
+<li><p><strong>params</strong> – The parameters of the node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The output tensor of the added node.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Graph.alignment">
+<em class="property">property </em><code class="sig-name descname">alignment</code><a class="headerlink" href="#smaug.Graph.alignment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Graph.backend">
+<em class="property">property </em><code class="sig-name descname">backend</code><a class="headerlink" href="#smaug.Graph.backend" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Graph.create_unique_name">
+<code class="sig-name descname">create_unique_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/graph.html#Graph.create_unique_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.Graph.create_unique_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a unique name for the node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> – The base name used to create the unique name.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Graph.disable_layout_transform">
+<code class="sig-name descname">disable_layout_transform</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/graph.html#Graph.disable_layout_transform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.Graph.disable_layout_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disable automatic layout transformation.</p>
+<p>Note that if the backend kernels do not support the data layouts that are
+manually specified when automatic layout transformations are disabled,
+execution will fail.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Graph.enable_layout_transform">
+<code class="sig-name descname">enable_layout_transform</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/graph.html#Graph.enable_layout_transform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.Graph.enable_layout_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable automatic layout transformation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Graph.get_node">
+<code class="sig-name descname">get_node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node_name</span></em>, <em class="sig-param"><span class="n">recursive</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/graph.html#Graph.get_node"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.Graph.get_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a node in the graph by its name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_name</strong> – Node name.</p></li>
+<li><p><strong>recursive</strong> – If true, recursively search the node in the parent graphs.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <cite>Node</cite> if we find the node or None is returned.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Graph.get_nodes">
+<code class="sig-name descname">get_nodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/graph.html#Graph.get_nodes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.Graph.get_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return nodes in the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Graph.get_root_graph">
+<code class="sig-name descname">get_root_graph</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/graph.html#Graph.get_root_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.Graph.get_root_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the root graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Graph.layout_trans_enabled">
+<em class="property">property </em><code class="sig-name descname">layout_trans_enabled</code><a class="headerlink" href="#smaug.Graph.layout_trans_enabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Graph.mem_policy">
+<em class="property">property </em><code class="sig-name descname">mem_policy</code><a class="headerlink" href="#smaug.Graph.mem_policy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Graph.merge">
+<code class="sig-name descname">merge</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">other</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/graph.html#Graph.merge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.Graph.merge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge another graph into this.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Graph.print_summary">
+<code class="sig-name descname">print_summary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/graph.html#Graph.print_summary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.Graph.print_summary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the summary of the graph.</p>
+<p>This function prints information of all the nodes in the graph, including a
+node’s name, operator type, input/output operators and
+input/output tensors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Graph.to_proto">
+<code class="sig-name descname">to_proto</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/graph.html#Graph.to_proto"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.Graph.to_proto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialize the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A tuple of (<cite>GraphProto</cite>, <cite>TensorDataArray</cite>).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Graph.write_graph">
+<code class="sig-name descname">write_graph</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/graph.html#Graph.write_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.Graph.write_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialize the graph to a protobuf file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> – Name of the output protobuf file. If not specified, use the graph’s
+name instead.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="smaug.Tensor">
+<em class="property">class </em><code class="sig-prename descclassname">smaug.</code><code class="sig-name descname">Tensor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dims</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_layout</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">data_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_format</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">tensor_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_index</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">targets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alignment</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/tensor.html#Tensor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.Tensor" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="smaug.Tensor.calc_padding">
+<code class="sig-name descname">calc_padding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/tensor.html#Tensor.calc_padding"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.Tensor.calc_padding" title="Permalink to this definition">¶</a></dt>
+<dd><p>This returns the size we need to pad on the last dimension.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Tensor.data_format">
+<em class="property">property </em><code class="sig-name descname">data_format</code><a class="headerlink" href="#smaug.Tensor.data_format" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Tensor.data_type">
+<em class="property">property </em><code class="sig-name descname">data_type</code><a class="headerlink" href="#smaug.Tensor.data_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Tensor.dims">
+<code class="sig-name descname">dims</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/tensor.html#Tensor.dims"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.Tensor.dims" title="Permalink to this definition">¶</a></dt>
+<dd><p>This returns the size of the dimension.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Tensor.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#smaug.Tensor.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Tensor.shape">
+<em class="property">property </em><code class="sig-name descname">shape</code><a class="headerlink" href="#smaug.Tensor.shape" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Tensor.source">
+<em class="property">property </em><code class="sig-name descname">source</code><a class="headerlink" href="#smaug.Tensor.source" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Tensor.source_index">
+<em class="property">property </em><code class="sig-name descname">source_index</code><a class="headerlink" href="#smaug.Tensor.source_index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Tensor.targets">
+<em class="property">property </em><code class="sig-name descname">targets</code><a class="headerlink" href="#smaug.Tensor.targets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Tensor.tensor_data">
+<em class="property">property </em><code class="sig-name descname">tensor_data</code><a class="headerlink" href="#smaug.Tensor.tensor_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="smaug.Tensor.to_tensor_proto">
+<code class="sig-name descname">to_tensor_proto</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tensor_proto</span></em>, <em class="sig-param"><span class="n">tensor_data_array</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/tensor.html#Tensor.to_tensor_proto"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.Tensor.to_tensor_proto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialize the tensor into a tensor proto.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tensor_proto</strong> – The tensor proto this tensor gets serialized into.</p></li>
+<li><p><strong>tensor_data_array</strong> – The tensor data array this tensor gets serialized into.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="smaug.cond">
+<code class="sig-prename descclassname">smaug.</code><code class="sig-name descname">cond</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">predication</span></em>, <em class="sig-param"><span class="n">true_fn</span></em>, <em class="sig-param"><span class="n">false_fn</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'cond'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/ops/control_flow_ops.html#cond"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.cond" title="Permalink to this definition">¶</a></dt>
+<dd><p>A conditional operator.</p>
+<p>This operator provides the capability of doing if-else statement. Depending on
+the predication value, either the True or the False body of the operator will
+be executed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predication</strong> – A predication tensor of value 0 or 1, determining which path to
+execute.</p></li>
+<li><p><strong>true_fn</strong> – The callable to be performed if <cite>predication</cite> is 1.</p></li>
+<li><p><strong>false_fn</strong> – The callable to be performed if <cite>predication</cite> is 0.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The tensors returned by either true_fn or false_fn.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="smaug.input_data">
+<code class="sig-prename descclassname">smaug.</code><code class="sig-name descname">input_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'data'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/smaug/python/ops/data_op.html#input_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#smaug.input_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 
 

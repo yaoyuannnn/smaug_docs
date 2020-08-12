@@ -162,6 +162,169 @@
             
   <div class="section" id="smaug-tensor">
 <h1>smaug.tensor<a class="headerlink" href="#smaug-tensor" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="smaug.tensor.reorder">
+<code class="sig-prename descclassname">smaug.tensor.</code><code class="sig-name descname">reorder</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">target_layout</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'reorder'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.tensor.reorder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="smaug.tensor.flatten">
+<code class="sig-prename descclassname">smaug.tensor.</code><code class="sig-name descname">flatten</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'flatten'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.tensor.flatten" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="smaug.tensor.concat">
+<code class="sig-prename descclassname">smaug.tensor.</code><code class="sig-name descname">concat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensors</span></em>, <em class="sig-param"><span class="n">axis</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'concat'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.tensor.concat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Concatenate tensors into one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_tensors</strong> – Input tensor to be concatenated.</p></li>
+<li><p><strong>axis</strong> – The dimension along which to concatenate.</p></li>
+<li><p><strong>name</strong> – Name of the operator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A concatenated tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="smaug.tensor.split">
+<code class="sig-prename descclassname">smaug.tensor.</code><code class="sig-name descname">split</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">num_or_size_splits</span></em>, <em class="sig-param"><span class="n">axis</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'split'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.tensor.split" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split a tensor into sub tensors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_tensor</strong> – Input tensor.</p></li>
+<li><p><strong>num_or_size_splits</strong> – Either an integer indicating the number of splits along
+axis or a 1D list containing the sizes of each output tensor along axis.
+If an integer, then it must evenly divide input_tensor.shape.dims[axis];
+otherwise the sum of sizes along the split axis must match that of the
+value.</p></li>
+<li><p><strong>axis</strong> – The dimension to split.</p></li>
+<li><p><strong>name</strong> – Name of the operator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of sub tensors.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="smaug.tensor.reshape">
+<code class="sig-prename descclassname">smaug.tensor.</code><code class="sig-name descname">reshape</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">shape</span></em>, <em class="sig-param"><span class="n">layout</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'reshape'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.tensor.reshape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reshape the given tensor in the same order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_tensor</strong> – Input tensor.</p></li>
+<li><p><strong>shape</strong> – New shape.</p></li>
+<li><p><strong>layout</strong> – New layout.</p></li>
+<li><p><strong>name</strong> – Name of the operator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Tensor with the new shape.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="smaug.tensor.expand_dims">
+<code class="sig-prename descclassname">smaug.tensor.</code><code class="sig-name descname">expand_dims</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">axis</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'expand_dims'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.tensor.expand_dims" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expand a tensor with an additional dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_tensor</strong> – Input tensor.</p></li>
+<li><p><strong>axis</strong> – Dimension to expand the shape of input tensor.</p></li>
+<li><p><strong>name</strong> – Name used for naming the operator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A tensor with an additional dimension inserted at index axis.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="smaug.tensor.squeeze">
+<code class="sig-prename descclassname">smaug.tensor.</code><code class="sig-name descname">squeeze</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">axis</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'squeeze'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.tensor.squeeze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Eliminate a dimension of size 1 from a tensor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_tensor</strong> – Input tensor.</p></li>
+<li><p><strong>axis</strong> – Dimension to be removed from the input tensor.</p></li>
+<li><p><strong>name</strong> – Named used for naming the operator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A tensor with a dimension removed at index axis.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="smaug.tensor.repeat">
+<code class="sig-prename descclassname">smaug.tensor.</code><code class="sig-name descname">repeat</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">multiples</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'repeat'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.tensor.repeat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a tensor by repeating a given tensor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_tensor</strong> – Input tensor.</p></li>
+<li><p><strong>multiples</strong> – A list that represents the number of multiples in each dimension
+of the input tensor.</p></li>
+<li><p><strong>name</strong> – Name of the operator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A repeated version of the input tensor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="smaug.tensor.stack">
+<code class="sig-prename descclassname">smaug.tensor.</code><code class="sig-name descname">stack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">multiple</span></em>, <em class="sig-param"><span class="n">axis</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'stack'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.tensor.stack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expand and repeat the specified dimension of a tensor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_tensor</strong> – Input tensor.</p></li>
+<li><p><strong>multiple</strong> – Number of repeats in the expanded dimension.</p></li>
+<li><p><strong>axis</strong> – Dimension on which to batch.</p></li>
+<li><p><strong>name</strong> – Name used for naming operators.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A tensor with a new dimension.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="smaug.tensor.unstack">
+<code class="sig-prename descclassname">smaug.tensor.</code><code class="sig-name descname">unstack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">axis</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'unstack'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.tensor.unstack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unpack the specified dimension of a tensor.</p>
+<p>The size = 1 dimension gets squeezed out.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_tensor</strong> – Input tensor.</p></li>
+<li><p><strong>axis</strong> – Dimension on which to unpack.</p></li>
+<li><p><strong>name</strong> – Name used for naming operators.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of tensors with the given dimension unpacked.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

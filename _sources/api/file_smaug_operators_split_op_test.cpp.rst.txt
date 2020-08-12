@@ -44,7 +44,7 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_split__op__test_8cpp_1aecba08f28661630cbf0236788c05b5e8`
-
 - :ref:`exhale_function_split__op__test_8cpp_1aa06b70b71de04f185634cb9eccb2a5b6`
+
+- :ref:`exhale_function_split__op__test_8cpp_1aecba08f28661630cbf0236788c05b5e8`
 

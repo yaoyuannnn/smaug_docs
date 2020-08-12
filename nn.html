@@ -162,6 +162,66 @@
             
   <div class="section" id="smaug-nn">
 <h1>smaug.nn<a class="headerlink" href="#smaug-nn" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="smaug.nn.convolution">
+<code class="sig-prename descclassname">smaug.nn.</code><code class="sig-name descname">convolution</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">filter_tensor</span></em>, <em class="sig-param"><span class="n">stride</span></em>, <em class="sig-param"><span class="n">padding</span></em>, <em class="sig-param"><span class="n">activation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">activation_params</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'conv'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.nn.convolution" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="smaug.nn.batch_norm">
+<code class="sig-prename descclassname">smaug.nn.</code><code class="sig-name descname">batch_norm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">mean_tensor</span></em>, <em class="sig-param"><span class="n">var_tensor</span></em>, <em class="sig-param"><span class="n">gamma_tensor</span></em>, <em class="sig-param"><span class="n">beta_tensor</span></em>, <em class="sig-param"><span class="n">activation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">activation_params</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'batch_norm'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.nn.batch_norm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="smaug.nn.max_pool">
+<code class="sig-prename descclassname">smaug.nn.</code><code class="sig-name descname">max_pool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">pool_size</span></em>, <em class="sig-param"><span class="n">stride</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'max_pool'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.nn.max_pool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="smaug.nn.mat_mul">
+<code class="sig-prename descclassname">smaug.nn.</code><code class="sig-name descname">mat_mul</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">weight_tensor</span></em>, <em class="sig-param"><span class="n">activation</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">activation_params</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'mat_mul'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.nn.mat_mul" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="smaug.nn.relu">
+<code class="sig-prename descclassname">smaug.nn.</code><code class="sig-name descname">relu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'relu'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.nn.relu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="smaug.nn.lrelu">
+<code class="sig-prename descclassname">smaug.nn.</code><code class="sig-name descname">lrelu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">slope</span><span class="o">=</span><span class="default_value">0.2</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'lrelu'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.nn.lrelu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="smaug.nn.elu">
+<code class="sig-prename descclassname">smaug.nn.</code><code class="sig-name descname">elu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="o">=</span><span class="default_value">0.1</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'relu'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.nn.elu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="smaug.nn.selu">
+<code class="sig-prename descclassname">smaug.nn.</code><code class="sig-name descname">selu</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="o">=</span><span class="default_value">1.6733</span></em>, <em class="sig-param"><span class="n">lambda_param</span><span class="o">=</span><span class="default_value">1.0507</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'selu'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.nn.selu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="smaug.nn.tanh">
+<code class="sig-prename descclassname">smaug.nn.</code><code class="sig-name descname">tanh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'tanh'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.nn.tanh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="smaug.nn.hard_tanh">
+<code class="sig-prename descclassname">smaug.nn.</code><code class="sig-name descname">hard_tanh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">min</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">max</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'hard_tanh'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.nn.hard_tanh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="smaug.nn.sigmoid">
+<code class="sig-prename descclassname">smaug.nn.</code><code class="sig-name descname">sigmoid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'sigmoid'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.nn.sigmoid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="smaug.nn.softmax">
+<code class="sig-prename descclassname">smaug.nn.</code><code class="sig-name descname">softmax</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_tensor</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.nn.softmax" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 
 

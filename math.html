@@ -162,6 +162,78 @@
             
   <div class="section" id="smaug-math">
 <h1>smaug.math<a class="headerlink" href="#smaug-math" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="smaug.math.add">
+<code class="sig-prename descclassname">smaug.math.</code><code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tensor_a</span></em>, <em class="sig-param"><span class="n">tensor_b</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'add'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.math.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Elementwise addition.</p>
+<p>If the inputs have different shapes, broadcasting is used to to make the
+shapes compatible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tensor_a</strong> – First input tensor.</p></li>
+<li><p><strong>tensor_b</strong> – Second input tensor.</p></li>
+<li><p><strong>name</strong> – Name of the operator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A tensor with the same shape as the inputs (or broadcast inputs).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="smaug.math.mul">
+<code class="sig-prename descclassname">smaug.math.</code><code class="sig-name descname">mul</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tensor_a</span></em>, <em class="sig-param"><span class="n">tensor_b</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'mul'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.math.mul" title="Permalink to this definition">¶</a></dt>
+<dd><p>Elementwise multiplication.</p>
+<p>If the inputs have different shapes, broadcasting is used to to make the
+shapes compatible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tensor_a</strong> – First input tensor.</p></li>
+<li><p><strong>tensor_b</strong> – Second input tensor.</p></li>
+<li><p><strong>name</strong> – Name of the operator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A tensor with the same shape as the inputs (or broadcast inputs).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="smaug.math.less">
+<code class="sig-prename descclassname">smaug.math.</code><code class="sig-name descname">less</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tensor_a</span></em>, <em class="sig-param"><span class="n">tensor_b</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'less'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.math.less" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the truth value of (tensor_a &lt; tensor_b) element-wise.</p>
+<p>If the inputs have different shapes, broadcasting is used to to make the
+shapes compatible.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="smaug.math.less_equal">
+<code class="sig-prename descclassname">smaug.math.</code><code class="sig-name descname">less_equal</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tensor_a</span></em>, <em class="sig-param"><span class="n">tensor_b</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'less_equal'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.math.less_equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the truth value of (tensor_a &lt;= tensor_b) element-wise.</p>
+<p>If the inputs have different shapes, broadcasting is used to to make the
+shapes compatible.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="smaug.math.greater">
+<code class="sig-prename descclassname">smaug.math.</code><code class="sig-name descname">greater</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tensor_a</span></em>, <em class="sig-param"><span class="n">tensor_b</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'great'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.math.greater" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the truth value of (tensor_a &gt; tensor_b) element-wise.</p>
+<p>If the inputs have different shapes, broadcasting is used to to make the
+shapes compatible.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="smaug.math.greater_equal">
+<code class="sig-prename descclassname">smaug.math.</code><code class="sig-name descname">greater_equal</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tensor_a</span></em>, <em class="sig-param"><span class="n">tensor_b</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'great_equal'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#smaug.math.greater_equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the truth value of (tensor_a &gt;= tensor_b) element-wise.</p>
+<p>If the inputs have different shapes, broadcasting is used to to make the
+shapes compatible.</p>
+</dd></dl>
+
 </div>
 
 

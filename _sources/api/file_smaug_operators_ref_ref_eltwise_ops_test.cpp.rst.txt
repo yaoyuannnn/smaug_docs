@@ -58,7 +58,7 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_ref__eltwise__ops__test_8cpp_1aa9cd50ed290969c944c18852ece2279a`
-
 - :ref:`exhale_function_ref__eltwise__ops__test_8cpp_1a83b93ed82b1794e08d69f8ba2f02a47a`
+
+- :ref:`exhale_function_ref__eltwise__ops__test_8cpp_1aa9cd50ed290969c944c18852ece2279a`
 

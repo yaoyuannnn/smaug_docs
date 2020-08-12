@@ -62,7 +62,7 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_smv__inner__product__op__test_8cpp_1a6983953c051a470bb4ca8d70a46975ec`
-
 - :ref:`exhale_function_smv__inner__product__op__test_8cpp_1aef9238429ec1f3a29c5f394db7e97a69`
+
+- :ref:`exhale_function_smv__inner__product__op__test_8cpp_1a6983953c051a470bb4ca8d70a46975ec`
 
