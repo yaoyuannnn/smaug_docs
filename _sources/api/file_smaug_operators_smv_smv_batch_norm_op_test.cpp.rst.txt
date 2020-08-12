@@ -60,11 +60,11 @@ Functions
 ---------
 
 
+- :ref:`exhale_function_smv__batch__norm__op__test_8cpp_1a6c25cc67295a3602cc1490e28868096e`
+
 - :ref:`exhale_function_smv__batch__norm__op__test_8cpp_1a089fad8c0cd7b4364975176bf77c5480`
 
 - :ref:`exhale_function_smv__batch__norm__op__test_8cpp_1af4d0b6249636eec90de4ac5342998361`
 
 - :ref:`exhale_function_smv__batch__norm__op__test_8cpp_1ad4295e075cb63c6739bdb31d70ad0456`
-
-- :ref:`exhale_function_smv__batch__norm__op__test_8cpp_1a6c25cc67295a3602cc1490e28868096e`
 
